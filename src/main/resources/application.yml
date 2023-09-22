@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/takeaway
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 10
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #????????
+      logic-delete-field: del_status
+      #???????????
+      logic-delete-value: 0
+      #???????????
+      logic-not-delete-value: 1
+      #???????
+      table-prefix: t_
+      #?????????MySQl????
+      id-type: auto
